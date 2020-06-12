@@ -1,12 +1,16 @@
 async function someRequest()
 {
     var params = new FormData();
-    params.append('pick_up_date', '2020-06-18T16:46:57.389Z');
-    params.append('return_date', '2020-06-20T16:46:57.389Z');
-    params.append('pick_up_location_id', 0);
-    params.append('costumes', [0,1]); 
-    
-    const response = await fetch('https://costume-rental.herokuapp.com/new_reservation',
+    params.append('name', 'MR. TEST');
+    params.append('size', 'VERY BIG');
+    params.append('type_', 'TROUSERS');
+    params.append('collection', 'POLISH CLASSICS'); 
+    params.append('price', 1600); 
+      
+
+
+    const response = await fetch('https://costume-rental.herokuapp.com/models',
+    //const response = await fetch('https://costume-rental.herokuapp.com/new_reservation',
     //const response = await fetch('https://costume-rental.herokuapp.com/test_new_resrvation', 
     {
         method: 'POST',
