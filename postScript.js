@@ -1,7 +1,7 @@
 function postData(domQuery)
 {
     var request = new XMLHttpRequest()
-    request.open('POST', 'https://costume-rental.herokuapp.com/new_reservation', true)
+    request.open('POST', 'https://costume-rental.herokuapp.com/test_new_reservation', true)
 
     //Send the proper header information along with the request
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -28,6 +28,6 @@ function postData(domQuery)
         }
     }
 
-console.log(out);
-request.send(out);
+console.log(data);
+request.send(data);
 }
