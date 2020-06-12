@@ -6,15 +6,20 @@ data.append('costumes', [0,1]);
 
    
 var request = new XMLHttpRequest()
-request.open('POST', 'https://costume-rental.herokuapp.com/test_new_reservation', true)
+request.open('POST', "https://costume-rental.herokuapp.com/test_new_resrvation", true)
 
 //Send the proper header information along with the request
 request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-request.onreadystatechange = function() 
+//request.onreadystatechange = function()
+request.onload = function()  
 { // Call a function when the state changes.
     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) 
     {
-         console.log(this.responseText); 
+        console.log(this.responseText);
+        data.append('pick_up_date', '2020-06-18T16:46:57.389Z');
+        data.append('return_date', '2020-06-20T16:46:57.389Z');
+        data.append('pick_up_location_id', 0);
+        data.append('costumes', [0,1]); 
             
             // Request finished. Do processing here.
             //var out = {};
