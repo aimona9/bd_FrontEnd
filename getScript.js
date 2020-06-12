@@ -16,25 +16,25 @@ request.onload = function() {
   var data = JSON.parse(this.response)
   if (request.status >= 200 && request.status < 400) {
     data.forEach(models => {
-      const models = document.createElement('div')
-      models.setAttribute('class', 'models')
+      const model = document.createElement('div')
+      model.setAttribute('class', 'models')
 
       const name = document.createElement('h1')
-      h1.textContent = models.name
+      h1.textContent = model.name
 
       const size = document.createElement('p')
-      p.textContent = `${models.size}...`
+      p.textContent = `${model.size}...`
 
       const type = document.createElement('p')
-      p.textContent = `${models.type}...`
+      p.textContent = `${model.type}...`
 
       const col = document.createElement('p')
-      p.textContent = `${models.collection}...`
+      p.textContent = `${model.collection}...`
 
       const price = document.createElement('p')
-      p.textContent = `${models.price}...`
+      p.textContent = `${model.price}...`
 
-      container.appendChild(models)
+      container.appendChild(model)
       models.appendChild(name)
       models.appendChild(size)
       models.appendChild(type)
