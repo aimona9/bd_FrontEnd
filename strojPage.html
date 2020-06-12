@@ -10,25 +10,19 @@
 </head>
 <body>
 <!-- CSS Reset -->
-<link rel="stylesheet" type="text/css" href="reset.css" tppabs="http://www.xooom.pl/work/magicadmin/css/reset.css" media="screen" />
-       
+<link rel="stylesheet" type="text/css" href="reset.css" media="screen" />       
 <!-- Fluid 960 Grid System - CSS framework -->
-<link rel="stylesheet" type="text/css" href="grid.css" tppabs="http://www.xooom.pl/work/magicadmin/css/grid.css" media="screen" />
-
+<link rel="stylesheet" type="text/css" href="grid.css" media="screen" />
 <!-- Main stylesheet -->
-<link rel="stylesheet" type="text/css" href="styles.css" tppabs="http://www.xooom.pl/work/magicadmin/css/styles.css" media="screen" />
-
+<link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
 <!-- WYSIWYG editor stylesheet -->
-<link rel="stylesheet" type="text/css" href="jquery.wysiwyg.css" tppabs="http://www.xooom.pl/work/magicadmin/css/jquery.wysiwyg.css" media="screen" />
-
+<link rel="stylesheet" type="text/css" href="jquery.wysiwyg.css" media="screen" />
 <!-- Table sorter stylesheet -->
-<link rel="stylesheet" type="text/css" href="tablesorter.css" tppabs="http://www.xooom.pl/work/magicadmin/css/tablesorter.css" media="screen" />
-
+<link rel="stylesheet" type="text/css" href="tablesorter.css" media="screen" />
 <!-- Thickbox stylesheet -->
-<link rel="stylesheet" type="text/css" href="thickbox.css" tppabs="http://www.xooom.pl/work/magicadmin/css/thickbox.css" media="screen" />
-
+<link rel="stylesheet" type="text/css" href="thickbox.css" media="screen" />
 <!-- Themes. Below are several color themes. Uncomment the line of your choice to switch to different color. All styles commented out means blue theme. -->
-<link rel="stylesheet" type="text/css" href="theme-blue.css" ppabs="http://www.xooom.pl/work/magicadmin/css/theme-blue.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="theme-blue.css" media="screen" />
 <!--<link rel="stylesheet" type="text/css" href="css/theme-red.css" media="screen" />-->
 <!--<link rel="stylesheet" type="text/css" href="css/theme-yellow.css" media="screen" />-->
 <!--<link rel="stylesheet" type="text/css" href="css/theme-green.css" media="screen" />-->
@@ -36,22 +30,16 @@
 
 <!-- JQuery engine script-->
 <script type="text/javascript" src="jquery-1.3.2.min.js" ></script>
-
 <!-- JQuery WYSIWYG plugin script -->
 <script type="text/javascript" src="jquery.wysiwyg.js" ></script>
-
 <!-- JQuery tablesorter plugin script-->
 <script type="text/javascript" src="jquery.tablesorter.min.js" ></script>
-
 <!-- JQuery pager plugin script for tablesorter tables -->
 <script type="text/javascript" src="jquery.tablesorter.pager.js" ></script>
-
 <!-- JQuery password strength plugin script -->
 <script type="text/javascript" src="jquery.pstrength-min.1.2.js" ></script>
-
 <!-- JQuery thickbox plugin script -->
 <script type="text/javascript" src="thickbox.js" ></script>
-
 <!-- Initiate WYIWYG text area -->
 <script type="text/javascript">
     $(function()
@@ -138,7 +126,10 @@
                     <ul id="nav">
                         <li><a href="index.html">Dashboard</a></li>
                         <li><a href="zamowienia.html">Zamówienia</a></li>                                
-                        <li id="current"><a href="">Strojów</a></li>                                                         </ul>
+                        <li id="current"><a href="strojPage.html">Strojów</a></li>
+                        <li><a href="apiTestGET.html">API Test - GET</a></li>
+                        <li><a href="apiTestPOST.html">API Test - POST</a></li>                                 
+                    </ul>
                 </div><!-- End. #Logo -->
             </div><!-- End. .grid_12-->
             <div style="clear: both;"></div>
@@ -148,9 +139,6 @@
 </div> <!-- End #header -->
 
 <div class="container_12">
-
-
-    
     <!-- Dashboard icons -->
     <div class="grid_7">            	
         
@@ -171,10 +159,8 @@
     <!-- Account overview -->
     <div class="grid_5">
         <div class="module">
-                <h2><span>Przegląd konta</span></h2>
-                
-                <div class="module-body">
-                
+                <h2><span>Przegląd konta</span></h2>                
+                <div class="module-body">                
                     <p>
                         <strong>User: </strong>User X<br />
                         <strong>Your last visit was on: </strong>20 January 2010,<br />
@@ -186,9 +172,7 @@
     </div> <!-- End .grid_5 -->
     
     <div style="clear:both;"></div>
-    
-    
-    
+    <!--Table for displaying Strój -->  
     <div class="grid_order_tables">             
         <div class="bottom-spacing">      
             <!-- Button -->

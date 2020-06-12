@@ -1,51 +1,30 @@
-const app = document.getElementById('test')
+const app = document.getElementById('post_test')
 
-//const logo = document.createElement('img')
-//logo.src = 'logo.png'
+//var data = new FormData(this.response)
 
-const models_container = document.createElement('div')
-models_container.setAttribute('class', 'container')
 
-//app.appendChild(logo)
-app.appendChild(models_container)
+var out = {};
+var s_data = $(app).serializeArray();
 
+for(var i = 0; i<s_data.length; i++)
+    {
+        var record = s_data[i];
+        out[record.name] = record.value;
+    }
+    return out;
+
+
+var data = JSON.stringify(out);
 var request = new XMLHttpRequest()
-request.open('GET', 'https://costume-rental.herokuapp.com/models', true)
-request.onload = function() {
-  // Begin accessing JSON data here
-  var data = JSON.parse(this.response)
-  if (request.status >= 200 && request.status < 400) {
-    data.forEach(model => {
-      const mod = document.createElement('div')
-      mod.setAttribute('class', 'model')
+request.open('POST', 'https://costume-rental.herokuapp.com/new_reservation', true)
 
-      const name = document.createElement('h2')
-      name.textContent = model.name
+//Send the proper header information along with the request
+request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-      const size = document.createElement('h4')
-      size.textContent = model.size
-
-      const type_ = document.createElement('h4')
-      type_.textContent = model.type_
-
-      const collection = document.createElement('h4')
-      collection.textContent = model.collection
-
-      const price = document.createElement('h4')
-      price.textContent = model.price
-
-      models_container.appendChild(mod)
-      mod.appendChild(name)
-      mod.appendChild(size)
-      mod.appendChild(type_)
-      mod.appendChild(collection)
-      mod.appendChild(price)
-    })
-  } else {
-    const errorMessage = document.createElement('marquee')
-    errorMessage.textContent = `Gah, it's not working!`
-    app.appendChild(errorMessage)
-  }
+request.onreadystatechange = function() { // Call a function when the state changes.
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+        // Request finished. Do processing here.
+    }
 }
-
-request.send()
+console.log(data);
+request.send(data);
