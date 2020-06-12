@@ -19,7 +19,7 @@ request.onload = function() {
       const model = document.createElement('div')
       model.setAttribute('class', 'models')
 
-      const name = document.createElement('"name')
+      const name = document.createElement('name')
       name.textContent = models.name
 
       const size = document.createElement('size')
