@@ -7,7 +7,7 @@ const models_container = document.createElement('div')
 models_container.setAttribute('class', 'container')
 
 //app.appendChild(logo)
-app.appendChild(container)
+app.appendChild(models_container)
 
 var request = new XMLHttpRequest()
 request.open('GET', 'https://costume-rental.herokuapp.com/models', true)
