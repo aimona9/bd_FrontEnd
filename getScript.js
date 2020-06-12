@@ -25,11 +25,11 @@ request.onload = function() {
       const size = document.createElement('size')
       size.textContent = model.size
 
-      const typ = document.createElement('typ')
-      typ.textContent = model.type_
+      const type_ = document.createElement('type_')
+      type_.textContent = model.type_
 
-      const col = document.createElement('col')
-      col.textContent = model.collection
+      const collection = document.createElement('collection')
+      collection.textContent = model.collection
 
       const price = document.createElement('price')
       price.textContent = model.price
@@ -37,8 +37,8 @@ request.onload = function() {
       models_container.appendChild(mod)
       mod.appendChild(name)
       mod.appendChild(size)
-      mod.appendChild(typ)
-      mod.appendChild(col)
+      mod.appendChild(type_)
+      mod.appendChild(collection)
       mod.appendChild(price)
     })
   } else {
