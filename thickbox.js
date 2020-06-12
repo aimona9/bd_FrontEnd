@@ -5,7 +5,7 @@
  * Licensed under the MIT License: http://www.opensource.org/licenses/mit-license.php
 */
 		  
-var tb_pathToImage = "images/thickbox/logo.gif";
+var tb_pathToImage = "logo.gif";
 
 /*!!!!!!!!!!!!!!!!! edit below this line at your own risk !!!!!!!!!!!!!!!!!!!!!!!*/
 

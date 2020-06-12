@@ -5,7 +5,7 @@ function postData(domQuery)
 
     //Send the proper header information along with the request
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
+    var data = null
     request.onreadystatechange = function() 
     { // Call a function when the state changes.
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) 
@@ -20,7 +20,7 @@ function postData(domQuery)
                 out[record.name] = record.value;
             }
     
-    var data = JSON.stringify(out); 
+        data = JSON.stringify(out); 
         }
         else
         {
