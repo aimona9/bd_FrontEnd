@@ -20,26 +20,26 @@ request.onload = function() {
       model.setAttribute('class', 'models')
 
       const name = document.createElement('h1')
-      h1.textContent = model.name
+      h1.textContent = models.name
 
       const size = document.createElement('p')
-      p.textContent = `${model.size}...`
+      p.textContent = `${models.size}...`
 
       const type = document.createElement('p')
-      p.textContent = `${model.type}...`
+      p.textContent = `${models.type}...`
 
       const col = document.createElement('p')
-      p.textContent = `${model.collection}...`
+      p.textContent = `${models.collection}...`
 
       const price = document.createElement('p')
-      p.textContent = `${model.price}...`
+      p.textContent = `${models.price}...`
 
-      container.appendChild(model)
-      models.appendChild(name)
-      models.appendChild(size)
-      models.appendChild(type)
-      models.appendChild(col)
-      models.appendChild(price)
+      models_container.appendChild(model)
+      model.appendChild(name)
+      model.appendChild(size)
+      model.appendChild(type)
+      model.appendChild(col)
+      model.appendChild(price)
     })
   } else {
     const errorMessage = document.createElement('marquee')
