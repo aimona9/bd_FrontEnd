@@ -1,0 +1,415 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Strojów</title>
+</head>
+<body>
+<!-- CSS Reset -->
+<link rel="stylesheet" type="text/css" href="reset.css" tppabs="http://www.xooom.pl/work/magicadmin/css/reset.css" media="screen" />
+       
+<!-- Fluid 960 Grid System - CSS framework -->
+<link rel="stylesheet" type="text/css" href="grid.css" tppabs="http://www.xooom.pl/work/magicadmin/css/grid.css" media="screen" />
+
+<!-- Main stylesheet -->
+<link rel="stylesheet" type="text/css" href="styles.css" tppabs="http://www.xooom.pl/work/magicadmin/css/styles.css" media="screen" />
+
+<!-- WYSIWYG editor stylesheet -->
+<link rel="stylesheet" type="text/css" href="jquery.wysiwyg.css" tppabs="http://www.xooom.pl/work/magicadmin/css/jquery.wysiwyg.css" media="screen" />
+
+<!-- Table sorter stylesheet -->
+<link rel="stylesheet" type="text/css" href="tablesorter.css" tppabs="http://www.xooom.pl/work/magicadmin/css/tablesorter.css" media="screen" />
+
+<!-- Thickbox stylesheet -->
+<link rel="stylesheet" type="text/css" href="thickbox.css" tppabs="http://www.xooom.pl/work/magicadmin/css/thickbox.css" media="screen" />
+
+<!-- Themes. Below are several color themes. Uncomment the line of your choice to switch to different color. All styles commented out means blue theme. -->
+<link rel="stylesheet" type="text/css" href="theme-blue.css" ppabs="http://www.xooom.pl/work/magicadmin/css/theme-blue.css" media="screen" />
+<!--<link rel="stylesheet" type="text/css" href="css/theme-red.css" media="screen" />-->
+<!--<link rel="stylesheet" type="text/css" href="css/theme-yellow.css" media="screen" />-->
+<!--<link rel="stylesheet" type="text/css" href="css/theme-green.css" media="screen" />-->
+<!--<link rel="stylesheet" type="text/css" href="css/theme-graphite.css" media="screen" />-->
+
+<!-- JQuery engine script-->
+<script type="text/javascript" src="jquery-1.3.2.min.js" ></script>
+
+<!-- JQuery WYSIWYG plugin script -->
+<script type="text/javascript" src="jquery.wysiwyg.js" ></script>
+
+<!-- JQuery tablesorter plugin script-->
+<script type="text/javascript" src="jquery.tablesorter.min.js" ></script>
+
+<!-- JQuery pager plugin script for tablesorter tables -->
+<script type="text/javascript" src="jquery.tablesorter.pager.js" ></script>
+
+<!-- JQuery password strength plugin script -->
+<script type="text/javascript" src="jquery.pstrength-min.1.2.js" ></script>
+
+<!-- JQuery thickbox plugin script -->
+<script type="text/javascript" src="thickbox.js" ></script>
+
+<!-- Initiate WYIWYG text area -->
+<script type="text/javascript">
+    $(function()
+    {
+    $('#wysiwyg').wysiwyg(
+    {
+    controls : {
+    separator01 : { visible : true },
+    separator03 : { visible : true },
+    separator04 : { visible : true },
+    separator00 : { visible : true },
+    separator07 : { visible : false },
+    separator02 : { visible : false },
+    separator08 : { visible : false },
+    insertOrderedList : { visible : true },
+    insertUnorderedList : { visible : true },
+    undo: { visible : true },
+    redo: { visible : true },
+    justifyLeft: { visible : true },
+    justifyCenter: { visible : true },
+    justifyRight: { visible : true },
+    justifyFull: { visible : true },
+    subscript: { visible : true },
+    superscript: { visible : true },
+    underline: { visible : true },
+    increaseFontSize : { visible : false },
+    decreaseFontSize : { visible : false }
+    }
+    } );
+    });
+</script>
+
+<!-- Initiate tablesorter script -->
+<script type="text/javascript">
+    $(document).ready(function() { 
+        $("#myTable") 
+        .tablesorter({
+            // zebra coloring
+            widgets: ['zebra'],
+            // pass the headers argument and assing a object 
+            headers: { 
+                // assign the sixth column (we start counting zero) 
+                6: { 
+                    // disable it by setting the property sorter to false 
+                    sorter: false 
+                } 
+            }
+        }) 
+    .tablesorterPager({container: $("#pager")}); 
+}); 
+</script>
+
+<!-- Initiate password strength script -->
+<script type="text/javascript">
+    $(function() {
+    $('.password').pstrength();
+    });
+</script>
+</head>
+<body>
+<!-- Header -->
+<div id="header">
+    <!-- Header. Status part -->
+    <div id="header-status">
+        <div class="container_12">
+            <div class="grid_8">
+                <h1> Wypożyczalnia strojów teatralnych</h1>                  
+            &nbsp;
+            </div>
+            <div class="grid_4">
+                <a href="" id="logout">
+                Logout
+                </a>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div> <!-- End #header-status -->
+    
+    <!-- Header. Main part -->
+    <div id="header-main">
+        <div class="container_12">
+            <div class="grid_12">
+                <div id="logo">
+                    <ul id="nav">
+                        <li><a href="admin.html">Dashboard</a></li>
+                        <li><a href="zamowienia.html">Zamówienia</a></li>                                
+                        <li id="current"><a href="">Strojów</a></li>                                                         </ul>
+                </div><!-- End. #Logo -->
+            </div><!-- End. .grid_12-->
+            <div style="clear: both;"></div>
+        </div><!-- End. .container_12 -->
+    </div> <!-- End #header-main -->
+    <div style="clear: both;"></div>                       
+</div> <!-- End #header -->
+
+<div class="container_12">
+
+
+    
+    <!-- Dashboard icons -->
+    <div class="grid_7">            	
+        
+        <a href="" class="dashboard-module">
+            <img src="Crystal_Clear_file.gif"  width="64" height="64" alt="edit" />
+            <span>Dodaj Nowa Stroj</span>
+        </a>               
+                   
+        <a href="" class="dashboard-module">
+            <img src="Crystal_Clear_calendar.gif"  width="64" height="64" alt="edit" />
+            <span>Kalendarz</span>
+        </a>              
+              
+     
+        <div style="clear: both"></div>
+    </div> <!-- End .grid_7 -->
+    
+    <!-- Account overview -->
+    <div class="grid_5">
+        <div class="module">
+                <h2><span>Przegląd konta</span></h2>
+                
+                <div class="module-body">
+                
+                    <p>
+                        <strong>User: </strong>User X<br />
+                        <strong>Your last visit was on: </strong>20 January 2010,<br />
+                        <strong>From IP: </strong>000.000.00.00
+                    </p>                   
+                </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div> <!-- End .grid_5 -->
+    
+    <div style="clear:both;"></div>
+    
+    
+    
+    <div class="grid_order_tables">             
+        <div class="bottom-spacing">      
+            <!-- Button -->
+            <div class="float-right">
+                <a href="" class="button">
+                    <span>Nowa Stroj <img src="plus-small.gif" width="12" height="9" alt="New article" /></span>
+                </a>
+            </div>
+            
+            <!-- Table records filtering -->
+            Filter: 
+            <select class="input-short">
+                <option value="1" selected="selected">Select filter</option>
+                <option value="2">Created last week</option>
+                <option value="3">Created last month</option>
+                <option value="4">Edited last week</option>
+                <option value="5">Edited last month</option>
+            </select>
+            
+        </div>
+        
+        
+        <!-- Example table -->
+        <div class="module">
+            <h2><span>Tabela Strojów</span></h2>
+            
+            <div class="module-table-body">
+                <form action="">
+                <table id="myTable" class="tablesorter">
+                    <thead>
+                        <tr>
+                            <th style="width:2%">#</th>                            
+                            <th style="width:1%">Zdęcie</th>
+                            <th style="width:5%">ID Stroj</th>
+                            <th style="width:5%">Numer dostępny</th>
+                            <th style="width:8%"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="align-center">1</td>
+                            <td><a href=""><img src="costume_1.jpg" class ="align-center "alt="Costume" width="150" height="125"></a></td>
+                            <td><a href="">ST556</a></td>                            
+                            <td>3</td>                    
+                            <td>
+                                <input type="checkbox" />
+                                <a href=""><img src="minus-circle.gif" width="16" height="16" alt="Usuń" /></a>
+                                <a href=""><img src="pencil.gif"  width="16" height="16" alt="Editować" /></a>
+                                <a href=""><img src="balloon.gif"  width="16" height="16" alt="Komentuje" /></a>
+                                <a href=""><img src="bin.gif"  width="16" height="16" alt="Refresh" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-center">2</td>
+                            <td><a href=""><img src="costume_2.jpg" class ="align-center "alt="Costume" width="150" height="125"></a></td>
+                            <td><a href="">ST302</a></td>
+                            <td>6</td>                    
+                            <td>
+                                <input type="checkbox" />
+                                <a href=""><img src="minus-circle.gif" width="16" height="16" alt="Usuń" /></a>
+                                <a href=""><img src="pencil.gif" width="16" height="16" alt="Editować" /></a>
+                                <a href=""><img src="balloon.gif" width="16" height="16" alt="Komentuje" /></a>
+                                <a href=""><img src="bin.gif" width="16" height="16" alt="Refresh" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-center">3</td>
+                           <td><a href=""><img src="costume_3.jpg" class ="align-center "alt="Costume" width="150" height="125"></a></td>
+                            <td><a href="">ST927</a></td>
+                            <td>2</td>                    
+                            <td>
+                                <input type="checkbox" />
+                                <a href=""><img src="minus-circle.gif" width="16" height="16" alt="Usuń" /></a>
+                                <a href=""><img src="pencil.gif" width="16" height="16" alt="Editować" /></a>
+                                <a href=""><img src="balloon.gif" width="16" height="16" alt="Komentuje" /></a>
+                                <a href=""><img src="bin.gif" width="16" height="16" alt="Refresh" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-center">4</td>
+                           <td><a href=""><img src="costume_4.jpg" class ="align-center "alt="Costume" width="150" height="125"></a></td>
+                            <td><a href="">ST790</a></td>
+                            <td>1</td>                    
+                            <td>
+                                <input type="checkbox" />
+                                <a href=""><img src="minus-circle.gif" width="16" height="16" alt="Usuń" /></a>
+                                <a href=""><img src="pencil.gif" width="16" height="16" alt="Editować" /></a>
+                                <a href=""><img src="balloon.gif" width="16" height="16" alt="Komentuje" /></a>
+                                <a href=""><img src="bin.gif"  width="16" height="16" alt="Refresh" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-center">5</td>
+                            <td><a href=""><img src="costume_5.jpg" class ="align-center "alt="Costume" width="150" height="125"></a></td>
+                            <td><a href="">ST562</a></td>
+                            <td>3</td>                    
+                            <td>
+                                <input type="checkbox" />
+                                <a href=""><img src="minus-circle.gif"  width="16" height="16" alt="Usuń" /></a>
+                                <a href=""><img src="pencil.gif"  width="16" height="16" alt="Editować" /></a>
+                                <a href=""><img src="balloon.gif"  width="16" height="16" alt="Komentuje" /></a>
+                                <a href=""><img src="bin.gif"  width="16" height="16" alt="Refresh" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-center">6</td>
+                            <td><a href=""><img src="costume_6.jpg" class ="align-center "alt="Costume" width="150" height="125"></a></td>
+                            <td><a href="">ST212</a></td>
+                            <td>3</td>                    
+                            <td>
+                                <input type="checkbox" />
+                                <a href=""><img src="minus-circle.gif"  width="16" height="16" alt="Usuń" /></a>
+                                <a href=""><img src="pencil.gif"  width="16" height="16" alt="Editować" /></a>
+                                <a href=""><img src="balloon.gif"  width="16" height="16" alt="Komentuje" /></a>
+                                <a href=""><img src="bin.gif"  width="16" height="16" alt="Refresh" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-center">7</td>
+                            <td><a href=""><img src="costume_7.jpg" class ="align-center "alt="Costume" width="150" height="125"></a></td>
+                            <td><a href="">ST82</a></td>
+                            <td>2</td>                    
+                            <td>
+                                <input type="checkbox" />
+                                <a href=""><img src="minus-circle.gif" width="16" height="16" alt="Usuń" /></a>
+                                <a href=""><img src="pencil.gif"  width="16" height="16" alt="Editować" /></a>
+                                <a href=""><img src="balloon.gif"  width="16" height="16" alt="Komentuje" /></a>
+                                <a href=""><img src="bin.gif"  width="16" height="16" alt="Refresh" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-center">8</td>
+                            <td><a href=""><img src="costume_8.jpg" class ="align-center "alt="Costume" width="150" height="125"></a></td>
+                            <td><a href="">ST12</a></td>                            
+                            <td>6</td>                    
+                            <td>
+                                <input type="checkbox" />
+                                <a href=""><img src="minus-circle.gif"  width="16" height="16" alt="Usuń" /></a>
+                                <a href=""><img src="pencil.gif"  width="16" height="16" alt="Editować" /></a>
+                                <a href=""><img src="balloon.gif"  width="16" height="16" alt="Komentuje" /></a>
+                                <a href=""><img src="bin.gif"  width="16" height="16" alt="Refresh" /></a>
+                            </td>
+                        </tr>  
+                       
+                    </tbody>
+                </table>
+                </form>
+                <div class="pager" id="pager">
+                    <form action="">
+                        <div>
+                        <img class="first" src="arrow-stop-180.gif"  alt="first"/>
+                        <img class="prev" src="arrow-180.gif"  alt="prev"/> 
+                        <input type="text" class="pagedisplay input-short align-center"/>
+                        <img class="next" src="arrow.gif"  alt="next"/>
+                        <img class="last" src="arrow-stop.gif"  alt="last"/> 
+                        <select class="pagesize input-short align-center">
+                            <option value="5" selected="selected">5</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                        </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="table-apply">
+                    <form action="">
+                    <div>
+                    <span>Apply action to selected:</span> 
+                    <select class="input-medium">
+                        <option value="1" selected="selected">Wybierz akcja</option>
+                        <option value="2">Rezerwuje</option>
+                        <option value="3">Editować</option>
+                        <option value="4"></option>
+                    </select>
+                    </div>
+                    </form>
+                </div>
+                <div style="clear: both"></div>
+             </div> <!-- End .module-table-body -->
+        </div> <!-- End .module -->                
+        
+             <div class="pagination">           
+                <a href="" class="button"><span><img src="arrow-stop-180-small.gif"  height="9" width="12" alt="First" /> First</span></a> 
+                <a href="" class="button"><span><img src="arrow-180-small.gif"  height="9" width="12" alt="Previous" /> Prev</span></a>
+                <div class="numbers">
+                    <span>Page:</span> 
+                    <a href="">1</a> 
+                    <span>|</span> 
+                    <a href="">2</a> 
+                    <span>|</span> 
+                    <span class="current">3</span> 
+                    <span>|</span> 
+                    <a href="">4</a> 
+                    <span>|</span> 
+                    <a href="">5</a> 
+                    <span>|</span> 
+                    <a href="">6</a> 
+                    <span>|</span> 
+                    <a href="">7</a> 
+                    <span>|</span> 
+                    <span>...</span> 
+                    <span>|</span> 
+                    <a href="">99</a>
+                </div> 
+                <a href="" class="button"><span>Next <img src="arrow-000-small.gif"  height="9" width="12" alt="Next" /></span></a> 
+                <a href="" class="button last"><span>Last <img src="arrow-stop-000-small.gif"  height="9" width="12" alt="Last" /></span></a>
+                <div style="clear: both;"></div> 
+             </div>                                  
+    </div> <!-- End .grid_12 -->
+    <br>        
+</div> <!-- End .container_12 -->		
+   
+<!-- Footer -->
+<div id="footer">
+    <div class="container_12">
+        <div class="grid_12">
+            <!-- You can change the copyright line for your own -->
+            <p>&copy; 2020. <a href="admin.html" title="Visit Today">Wypożyczalnia strojów teatralnych</a></p>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+</div> <!-- End #footer -->
+</body>
+</html>
