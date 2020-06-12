@@ -5,8 +5,9 @@ async function someRequest()
     params.append('return_date', '2020-06-20T16:46:57.389Z');
     params.append('pick_up_location_id', 0);
     params.append('costumes', [0,1]); 
-
-    const response = await fetch('https://costume-rental.herokuapp.com/test_new_resrvation', 
+    
+    const response = await fetch('https://costume-rental.herokuapp.com/new_reservation',
+    //const response = await fetch('https://costume-rental.herokuapp.com/test_new_resrvation', 
     {
         method: 'POST',
         mode:'cors',
@@ -18,6 +19,7 @@ async function someRequest()
     });
         const data = await response.json()
         console.log(data)
+        alert("Button was clicked and postScript.js was run")
 }
   
 
