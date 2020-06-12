@@ -28,90 +28,61 @@
         <!--<link rel="stylesheet" type="text/css" href="css/theme-red.css" media="screen" />-->
         <!--<link rel="stylesheet" type="text/css" href="css/theme-yellow.css" media="screen" />-->
         <!--<link rel="stylesheet" type="text/css" href="css/theme-green.css" media="screen" />-->
-        <!--<link rel="stylesheet" type="text/css" href="css/theme-graphite.css" media="screen" />-->
-        
-		<!-- JQuery engine script-->
-		<script type="text/javascript" src="jquery-1.3.2.min.js" ></script>
-        
-		<!-- JQuery WYSIWYG plugin script -->
-		<script type="text/javascript" src="jquery.wysiwyg.js" ></script>
-        
-        <!-- JQuery tablesorter plugin script-->
-		<script type="text/javascript" src="jquery.tablesorter.min.js" ></script>
-        
-		<!-- JQuery pager plugin script for tablesorter tables -->
-		<script type="text/javascript" src="jquery.tablesorter.pager.js" ></script>
-        
-		<!-- JQuery password strength plugin script -->
-		<script type="text/javascript" src="jquery.pstrength-min.1.2.js" ></script>
-        
-		<!-- JQuery thickbox plugin script -->
-		<script type="text/javascript" src="thickbox.js" ></script>
-        
-        <!-- Initiate WYIWYG text area -->
-		<script type="text/javascript">
-			$(function()
-			{
-			$('#wysiwyg').wysiwyg(
-			{
-			controls : {
-			separator01 : { visible : true },
-			separator03 : { visible : true },
-			separator04 : { visible : true },
-			separator00 : { visible : true },
-			separator07 : { visible : false },
-			separator02 : { visible : false },
-			separator08 : { visible : false },
-			insertOrderedList : { visible : true },
-			insertUnorderedList : { visible : true },
-			undo: { visible : true },
-			redo: { visible : true },
-			justifyLeft: { visible : true },
-			justifyCenter: { visible : true },
-			justifyRight: { visible : true },
-			justifyFull: { visible : true },
-			subscript: { visible : true },
-			superscript: { visible : true },
-			underline: { visible : true },
-            increaseFontSize : { visible : false },
-            decreaseFontSize : { visible : false }
-			}
-			} );
-			});
-        </script>
-        
-        <!-- Initiate tablesorter script -->
-        <script type="text/javascript">
-			$(document).ready(function() { 
-				$("#myTable") 
-				.tablesorter({
-					// zebra coloring
-					widgets: ['zebra'],
-					// pass the headers argument and assing a object 
-					headers: { 
-						// assign the sixth column (we start counting zero) 
-						6: { 
-							// disable it by setting the property sorter to false 
-							sorter: false 
-						} 
-					}
-				}) 
-			.tablesorterPager({container: $("#pager")}); 
-		}); 
-		</script>
-        
-        <!-- Initiate password strength script -->
-		<script type="text/javascript">
-			$(function() {
-			$('.password').pstrength();
-			});
-        </script>
-	</head>
-	<body>
-    	        
-        <div id = "test"></div>
-        <script src="getScript.js"></script>	
-           
+        <!--<link rel="stylesheet" type="text/css" href="css/theme-graphite.css" media="screen" />-->   
        
+</head>
+<body>
+    	<!-- Header -->
+        <div id="header">
+            <!-- Header. Status part -->
+            <div id="header-status">
+                <div class="container_12">
+                    <div class="grid_8">
+                        <h1> Wypożyczalnia strojów teatralnych</h1>                         
+                           
+					&nbsp;
+                    </div>
+                    <div class="grid_4">
+                        <a href="" id="logout">
+                        Logout
+                        </a>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div> <!-- End #header-status -->
+            
+            <!-- Header. Main part -->
+            <div id="header-main">
+                <div class="container_12">
+                    <div class="grid_12">
+                        <div id="logo">
+                            <ul id="nav">
+                                <li><a href="index.html">Dashboard</a></li>
+                                <li><a href="zamowienia.html">Zamówienia</a></li>                                
+                                <li><a href="strojPage.html">Strojów</a></li>
+                                <li id="current"><a href="">API Test - GET</a></li>
+                                <li><a href="apiTestPOST.html">API Test - POST</a></li>                                 
+                            </ul>
+                        </div><!-- End. #Logo -->
+                    </div><!-- End. .grid_12-->
+                    <div style="clear: both;"></div>
+                </div><!-- End. .container_12 -->
+            </div> <!-- End #header-main -->
+            <div style="clear: both;"></div>                       
+        </div> <!-- End #header -->
+        
+        <div id = "test">
+            <script src="getScript.js"></script>	
+        </div>  
+        <!-- Footer -->
+        <div id="footer">
+        	<div class="container_12">
+            	<div class="grid_12">
+                	<!-- You can change the copyright line for your own -->
+                	<p>&copy; 2020. <a href="index.html" title="Visit Today">Wypożyczalnia strojów teatralnych</a></p>
+        		</div>
+            </div>
+            <div style="clear:both;"></div>
+        </div> <!-- End #footer -->
 	</body>
 </html>
