@@ -24,8 +24,9 @@
   }
   
   .models_container {
+	padding-inline-start:15px ;
 	display: block;
-	flex-wrap: wrap;
+	padding: 15px 15x;
   }
   
   .model {
