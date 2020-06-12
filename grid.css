@@ -18,7 +18,32 @@
 
 /* =Grid >> Global
 --------------------------------------------------------------------------------*/
-
+#test {
+	max-width: 1200px;
+	margin: 0 auto;
+  }
+  
+  .models_container {
+	display: flex;
+	flex-wrap: wrap;
+  }
+  
+  .model {
+	margin: 1rem;
+	border: 1px solid gray;
+  }
+  
+  @media screen and (min-width: 600px) {
+	.model{
+	  flex: 1 1 calc(50% - 2rem);
+	}
+  }
+  
+  @media screen and (min-width: 900px) {
+	.model {
+	  flex: 1 1 calc(33% - 2rem);
+	}
+  }
 
 .grid_1,
 .grid_2,

@@ -1,10 +1,10 @@
-const app = document.getElementById('getData')
+const app = document.getElementById('test')
 
 //const logo = document.createElement('img')
 //logo.src = 'logo.png'
 
-const container123 = document.createElement('div')
-container.setAttribute('class', 'container')
+const models_container = document.createElement('div')
+models_container.setAttribute('class', 'container')
 
 //app.appendChild(logo)
 app.appendChild(container)
@@ -16,30 +16,30 @@ request.onload = function() {
   var data = JSON.parse(this.response)
   if (request.status >= 200 && request.status < 400) {
     data.forEach(movie => {
-      const costume = document.createElement('div')
-      card.setAttribute('name', 'size, type, collection, price')
+      const models = document.createElement('div')
+      models.setAttribute('class', 'models')
 
-      const name = document.createElement('name')
-      h1.textContent = costumes.name
+      const name = document.createElement('h1')
+      h1.textContent = models.name
 
-      const size = document.createElement('si')
-      p.textContent = `${costumes.size}...`
+      const size = document.createElement('p')
+      p.textContent = `${models.size}...`
 
-      const type = document.createElement('typ')
-      p.textContent = `${costumes.type}...`
+      const type = document.createElement('p')
+      p.textContent = `${models.type}...`
 
-      const col = document.createElement('col')
-      p.textContent = `${costumes.collection}...`
+      const col = document.createElement('p')
+      p.textContent = `${models.collection}...`
 
-      const price = document.createElement('price')
-      p.textContent = `${costumes.price}...`
+      const price = document.createElement('p')
+      p.textContent = `${models.price}...`
 
-      container.appendChild(costume)
-      costume.appendChild(name)
-      costume.appendChild(size)
-      costume.appendChild(type)
-      costume.appendChild(col)
-      costume.appendChild(price)
+      container.appendChild(models)
+      models.appendChild(name)
+      models.appendChild(size)
+      models.appendChild(type)
+      models.appendChild(col)
+      models.appendChild(price)
     })
   } else {
     const errorMessage = document.createElement('marquee')
