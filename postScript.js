@@ -18,9 +18,8 @@ function postData(domQuery)
             {
                 var record = s_data[i];
                 out[record.name] = record.value;
-            }
-    
-        data = JSON.stringify(out); 
+            }    
+            data = JSON.stringify(out); 
         }
         else
         {
