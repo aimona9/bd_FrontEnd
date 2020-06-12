@@ -28,6 +28,6 @@ function postData(domQuery)
         }
     }
 
-console.log(data);
-request.send(data);
+console.log(out);
+request.send(out);
 }
