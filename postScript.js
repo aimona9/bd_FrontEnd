@@ -1,10 +1,10 @@
 async function someRequest()
 {
-    var data = new FormData();
-    data.append('pick_up_date', '2020-06-18T16:46:57.389Z');
-    data.append('return_date', '2020-06-20T16:46:57.389Z');
-    data.append('pick_up_location_id', 0);
-    data.append('costumes', [0,1]); 
+    var params = new FormData();
+    params.append('pick_up_date', '2020-06-18T16:46:57.389Z');
+    params.append('return_date', '2020-06-20T16:46:57.389Z');
+    params.append('pick_up_location_id', 0);
+    params.append('costumes', [0,1]); 
 
     const response = await fetch('https://costume-rental.herokuapp.com/test_new_resrvation', 
     {
@@ -14,7 +14,7 @@ async function someRequest()
         {
            'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(params)
     });
         const data = await response.json()
         console.log(data)
