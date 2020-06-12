@@ -15,31 +15,31 @@ request.onload = function() {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response)
   if (request.status >= 200 && request.status < 400) {
-    data.forEach(models => {
-      const model = document.createElement('div')
-      model.setAttribute('class', 'models')
+    data.forEach(model => {
+      const mod = document.createElement('div')
+      mod.setAttribute('class', 'model')
 
       const name = document.createElement('name')
-      name.textContent = models.name
+      name.textContent = model.name
 
       const size = document.createElement('size')
-      size.textContent = models.size
+      size.textContent = model.size
 
       const typ = document.createElement('typ')
-      typ.textContent = models.type
+      typ.textContent = model.type_
 
       const col = document.createElement('col')
-      col.textContent = models.collection
+      col.textContent = model.collection
 
       const price = document.createElement('price')
-      price.textContent = models.price
+      price.textContent = model.price
 
-      models_container.appendChild(model)
-      model.appendChild(name)
-      model.appendChild(size)
-      model.appendChild(typ)
-      model.appendChild(col)
-      model.appendChild(price)
+      models_container.appendChild(mod)
+      mod.appendChild(name)
+      mod.appendChild(size)
+      mod.appendChild(typ)
+      mod.appendChild(col)
+      mod.appendChild(price)
     })
   } else {
     const errorMessage = document.createElement('marquee')
