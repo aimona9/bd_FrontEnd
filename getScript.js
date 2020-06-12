@@ -23,21 +23,21 @@ request.onload = function() {
       name.textContent = models.name
 
       const size = document.createElement('size')
-      size.textContent = `${models.size}...`
+      size.textContent = models.size
 
       const typ = document.createElement('typ')
-      typ.textContent = `${models.type}...`
+      typ.textContent = models.type
 
       const col = document.createElement('col')
-      col.textContent = `${models.collection}...`
+      col.textContent = models.collection
 
       const price = document.createElement('price')
-      price.textContent = `${models.price}...`
+      price.textContent = models.price
 
       models_container.appendChild(model)
       model.appendChild(name)
       model.appendChild(size)
-      model.appendChild(type)
+      model.appendChild(typ)
       model.appendChild(col)
       model.appendChild(price)
     })
