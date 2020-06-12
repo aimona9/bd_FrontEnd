@@ -19,20 +19,20 @@ request.onload = function() {
       const model = document.createElement('div')
       model.setAttribute('class', 'models')
 
-      const name = document.createElement('h1')
-      h1.textContent = models.name
+      const name = document.createElement('"name')
+      name.textContent = models.name
 
-      const size = document.createElement('p')
-      p.textContent = `${models.size}...`
+      const size = document.createElement('size')
+      size.textContent = `${models.size}...`
 
-      const type = document.createElement('p')
-      p.textContent = `${models.type}...`
+      const typ = document.createElement('typ')
+      typ.textContent = `${models.type}...`
 
-      const col = document.createElement('p')
-      p.textContent = `${models.collection}...`
+      const col = document.createElement('col')
+      col.textContent = `${models.collection}...`
 
-      const price = document.createElement('p')
-      p.textContent = `${models.price}...`
+      const price = document.createElement('price')
+      price.textContent = `${models.price}...`
 
       models_container.appendChild(model)
       model.appendChild(name)
