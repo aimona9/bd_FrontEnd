@@ -1,42 +1,60 @@
 async function someRequest()
 {
     var params = new FormData();
-    params.append('pick_up_date', "2020-06-14T18:08:03.314Z");
-    params.append('return_date', "2020-06-24T18:08:03.315Z");
-    params.append('pick_up_location_id',0);
+    params.append('pick_up_date', "2027-06-14T18:08:03.314Z");
+    params.append('return_date', "2028-06-24T18:08:03.315Z");
+    params.append('pick_up_location_id',1);
     params.append('costumes', [1,2]); 
     
+    var Base64 = require('js-base64').Base64;
+    var username = "test";
+    var password = "admin1";
+    //let base64 = require('base-64');
+    var request = new XMLHttpRequest();    
+    var url = 'https://costume-rental.herokuapp.com/new_reservation';    
+    request.open('POST', url, true);
+        
+        //Send the proper header information along with the request
+        request.setRequestHeader('Authorization', 'Basic ' + Base64.encode(username + ":" + password));
+        
+        request.onreadystatechange = function() {//Call a function when the state changes.
+            if(request.readyState == 4 && request.status == 200) {
+                alert(request.responseText);
+            }
+        }
+        request.send(params);
+}
 
     //let base64 = require('base-64');
 
     
-    let username = 'test';
-    let password = 'admin1';
+    //let username = 'test';
+    //let password = 'admin1';
 
-    let headers = new Headers();
+    //let headers = new Headers();
 
 //headers.append('Content-Type', 'text/json');
 
-    headers.set('Authorization', 'Basic ' + base64.encode(username + ":" + password));
+    //headers.set('Authorization', 'Basic ' + base64.encode(username + ":" + password));
       
     //const response = await fetch('https://costume-rental.herokuapp.com/models',
-    const response = await fetch('https://costume-rental.herokuapp.com/new_reservation',
+    //const response = await fetch('https://costume-rental.herokuapp.com/new_reservation',
     
     //const response = await fetch('https://costume-rental.herokuapp.com/test_new_resrvation', 
-    {
+   /*  {
         method: 'POST',
         mode:'cors',
         headers: 
         {
-          headers,
-           'Content-Type': 'application/json'
+          //headers,
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(params)
     });
         const data = await response.json()
         console.log(data)
         alert("Button was clicked and postScript.js was run")
-}
+} */
   
 
 //Send the proper header information along with the request
