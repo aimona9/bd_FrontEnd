@@ -20,9 +20,9 @@ async function someRequest()
     headers.set('Authorization', 'Basic ' + base64.encode(username + ":" + password));
       
     //const response = await fetch('https://costume-rental.herokuapp.com/models',
-    const response = await fetch('https://costume-rental.herokuapp.com/new_reservation',
+    //const response = await fetch('https://costume-rental.herokuapp.com/new_reservation',
     
-    //const response = await fetch('https://costume-rental.herokuapp.com/test_new_resrvation', 
+    const response = await fetch('https://costume-rental.herokuapp.com/test_new_resrvation', 
     {
         method: 'POST',
         mode:'cors',
