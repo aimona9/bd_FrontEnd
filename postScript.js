@@ -1,29 +1,41 @@
 async function someRequest()
 {
+    alert("click function was called");
     var params = new FormData();
-    params.append('name', 'MR. TEST');
-    params.append('size', 'VERY BIG');
-    params.append('type_', 'TROUSERS');
-    params.append('collection', 'POLISH CLASSICS'); 
-    params.append('price', 1600); 
-      
+    params.append("pick_up_date", "2007-06-14T18:08:03.314Z");
+    params.append("return_date", "2008-06-24T18:08:03.315Z");
+    params.append("pick_up_location_id",1);
+    params.append("costumes", [1]); 
 
+    var dat = JSON.stringify(params);
+    
+    //var Base64 = req
+    //var Base64 = require('js-base64').Base64;
+    var username = "test";
+    var password = "admin1";
+    //let base64 = require('base-64');
+    var request = new XMLHttpRequest();    
+    var url = 'https://costume-rental.herokuapp.com/new_reservation';    
+    request.open('POST', url, false, username, password);
+    request.withCredentials=true;
+    //Send the proper header information along with the request
+    //request.setRequestHeader('Authorization', 'Basic ' + Base64.encode(username + ":" + password));
 
-    const response = await fetch('https://costume-rental.herokuapp.com/models',
-    //const response = await fetch('https://costume-rental.herokuapp.com/new_reservation',
-    //const response = await fetch('https://costume-rental.herokuapp.com/test_new_resrvation', 
+    request.onreadystatechange = function() 
     {
-        method: 'POST',
-        mode:'cors',
-        headers: 
-        {
-           'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(params)
-    });
-        const data = await response.json()
-        console.log(data)
-        alert("Button was clicked and postScript.js was run")
+      //Call a function when the state changes.
+      console.log("Checking if state is ready");
+      if(request.readyState == 4 && request.status == 200) 
+      {
+        console.log(dat);
+        alert(request.responseText);
+      }
+      else 
+      {
+        alert('Error');
+      }
+    }
+    request.send(dat);
 }
   
 
