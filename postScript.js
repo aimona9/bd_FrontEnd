@@ -1,22 +1,34 @@
 async function someRequest()
 {
     var params = new FormData();
-    params.append('name', 'MR. TEST');
-    params.append('size', 'VERY BIG');
-    params.append('type_', 'TROUSERS');
-    params.append('collection', 'POLISH CLASSICS'); 
-    params.append('price', 1600); 
+    params.append('pick_up_date', "2020-06-14T18:08:03.314Z");
+    params.append('return_date', "2020-06-24T18:08:03.315Z");
+    params.append('pick_up_location_id',0);
+    params.append('costumes', [1,2]); 
+    
+
+    let base64 = require('base-64');
+
+    
+    let username = 'test';
+    let password = 'admin1';
+
+    let headers = new Headers();
+
+//headers.append('Content-Type', 'text/json');
+
+    headers.set('Authorization', 'Basic ' + base64.encode(username + ":" + password));
       
-
-
     //const response = await fetch('https://costume-rental.herokuapp.com/models',
-    //const response = await fetch('https://costume-rental.herokuapp.com/new_reservation',
-    const response = await fetch('https://costume-rental.herokuapp.com/test_new_resrvation', 
+    const response = await fetch('https://costume-rental.herokuapp.com/new_reservation',
+    
+    //const response = await fetch('https://costume-rental.herokuapp.com/test_new_resrvation', 
     {
         method: 'POST',
         mode:'cors',
         headers: 
         {
+          headers,
            'Content-Type': 'application/json'
         },
         body: JSON.stringify(params)
