@@ -1,28 +1,39 @@
 async function someRequest()
 {
+    alert("click function was called");
     var params = new FormData();
-    params.append('pick_up_date', "2027-06-14T18:08:03.314Z");
-    params.append('return_date', "2028-06-24T18:08:03.315Z");
+    params.append('pick_up_date', "2007-06-14T18:08:03.314Z");
+    params.append('return_date', "2008-06-24T18:08:03.315Z");
     params.append('pick_up_location_id',1);
-    params.append('costumes', [1,2]); 
+    params.append('costumes', [1]); 
     
-    var Base64 = require('js-base64').Base64;
+    //var Base64 = req
+    //var Base64 = require('js-base64').Base64;
     var username = "test";
     var password = "admin1";
     //let base64 = require('base-64');
     var request = new XMLHttpRequest();    
     var url = 'https://costume-rental.herokuapp.com/new_reservation';    
-    request.open('POST', url, true);
-        
-        //Send the proper header information along with the request
-        request.setRequestHeader('Authorization', 'Basic ' + Base64.encode(username + ":" + password));
-        
-        request.onreadystatechange = function() {//Call a function when the state changes.
-            if(request.readyState == 4 && request.status == 200) {
-                alert(request.responseText);
-            }
-        }
-        request.send(params);
+    request.open('POST', url, false, username, password);
+    request.withCredentials=true;
+    //Send the proper header information along with the request
+    //request.setRequestHeader('Authorization', 'Basic ' + Base64.encode(username + ":" + password));
+
+    request.onreadystatechange = function() 
+    {
+      //Call a function when the state changes.
+      console.log("Checking if state is ready");
+      if(request.readyState == 4 && request.status == 200) 
+      {
+        console.log(params);
+        alert(request.responseText);
+      }
+      else 
+      {
+        alert('Error');
+      }
+    }
+    request.send(params);
 }
 
     //let base64 = require('base-64');
