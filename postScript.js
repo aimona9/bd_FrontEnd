@@ -7,7 +7,7 @@ async function someRequest()
     params.append('costumes', [1,2]); 
     
 
-    let base64 = require('base-64');
+    //let base64 = require('base-64');
 
     
     let username = 'test';
