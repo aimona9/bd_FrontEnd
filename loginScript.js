@@ -15,7 +15,9 @@ function loginRequest()
         console.log("Correct username and password");
         setTimeout(() => {
             //window.location.replace = 'https://wypozyczalniastrojowteatrlnych.herokuapp.com/main.html';
-            window.open('https://wypozyczalniastrojowteatrlnych.herokuapp.com/main.html');
+            //window.open('https://wypozyczalniastrojowteatrlnych.herokuapp.com/main.html');
+            //window.open('https://wypozyczalniastrojowteatrlnych.herokuapp.com/index.html').close();
+            window.localStorage.clear();
         })
     
         
