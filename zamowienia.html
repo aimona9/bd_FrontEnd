@@ -5,26 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Dodaj Nowa Strój</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
     <title>Zamówienia</title>
-</head>
-<body>
-        <!-- CSS Reset -->
-		<link rel="stylesheet" type="text/css" href="reset.css" media="screen" />       
-        <!-- Fluid 960 Grid System - CSS framework -->
-		<link rel="stylesheet" type="text/css" href="grid.css" media="screen" />		
-        <!-- Main stylesheet -->
-        <link rel="stylesheet" type="text/css" href="styles.css"  media="screen" />        
-        <!-- WYSIWYG editor stylesheet -->
-        <link rel="stylesheet" type="text/css" href="jquery.wysiwyg.css" media="screen" />        
-        <!-- Table sorter stylesheet -->
-        <link rel="stylesheet" type="text/css" href="tablesorter.css" media="screen" />        
-        <!-- Thickbox stylesheet -->
-        <link rel="stylesheet" type="text/css" href="thickbox.css" media="screen" />
-
-        <!-- Below are several color themes. Uncomment the line of your choice to switch to different color. All styles commented out means blue theme. -->
-        <link rel="stylesheet" type="text/css" href="theme-blue.css" media="screen" />
+    <!-- CSS Reset -->
+	<link rel="stylesheet" type="text/css" href="reset.css" media="screen" />       
+       <!-- Fluid 960 Grid System - CSS framework -->
+	<link rel="stylesheet" type="text/css" href="grid.css" media="screen" />		
+       <!-- Main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css"  media="screen" />        
+    <!-- WYSIWYG editor stylesheet -->
+    <link rel="stylesheet" type="text/css" href="jquery.wysiwyg.css" media="screen" />        
+    <!-- Table sorter stylesheet -->
+    <link rel="stylesheet" type="text/css" href="tablesorter.css" media="screen" />        
+    <!-- Thickbox stylesheet -->
+    <link rel="stylesheet" type="text/css" href="thickbox.css" media="screen" />
+    <!-- Below are several color themes. Uncomment the line of your choice to switch to different color. All styles commented out means blue theme. -->
+    <link rel="stylesheet" type="text/css" href="theme-blue.css" media="screen" />
         <!--<link rel="stylesheet" type="text/css" href="css/theme-red.css" media="screen" />-->
         <!--<link rel="stylesheet" type="text/css" href="css/theme-yellow.css" media="screen" />-->
         <!--<link rel="stylesheet" type="text/css" href="css/theme-green.css" media="screen" />-->
@@ -100,8 +96,8 @@
 			$('.password').pstrength();
 			});
         </script>
-	</head>
-	<body>
+</head>
+<body>
     	<!-- Header -->
         <div id="header">
             <!-- Header. Status part -->
@@ -141,104 +137,11 @@
             <div style="clear: both;"></div>                       
         </div> <!-- End #header -->
         
-		<div class="container_12">           
-            <!-- Dashboard icons -->
-            <div class="grid_7">  	
-                
-                <a href="addNewOrder.html" class="dashboard-module">
-                	<img src="Crystal_Clear_file.gif" width="64" height="64" alt="edit" />
-                	<span>Dodaj Nowa Zamówienia</span>
-                </a>               
-                           
-                <a href="" class="dashboard-module">
-                	<img src="Crystal_Clear_calendar.gif" width="64" height="64" alt="edit" />
-                	<span>Kalendarz</span>
-                </a>              
-                      
-             
-                <div style="clear: both"></div>
-            </div> <!-- End .grid_7 -->
-            
-            <!-- Account overview -->
-            <div class="grid_5">
-                <div class="module">
-                        <h2><span>Przegląd konta</span></h2>                        
-                        <div class="module-body">                        
-                        	<p>
-                                <strong>User: </strong>User X<br />
-                                <strong>Your last visit was on: </strong>20 January 2010,<br />
-                                <strong>From IP: </strong>000.000.00.00
-                            </p>
-                           
-                        </div>
-                </div>
-                <div style="clear:both;"></div>
-            </div> <!-- End .grid_5 -->
-            
-            <div style="clear:both;"></div>           
-            
-            <!--Table for displaying orders-->
-            <div class="grid_order_tables">                                 
-                <div class="bottom-spacing">                
-                    <!-- Button -->
-                    <div class="float-right">
-                        <a href="" class="button">
-                        	<span>Nowa Zamówienia <img src="plus-small.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/plus-small.gif" width="12" height="9" alt="New article" /></span>
-                        </a>
-                    </div>
-                    
-                    <!-- Table records filtering -->
-                    Filter: 
-                    <select class="input-short">
-                    	<option value="1" selected="selected">Select filter</option>
-                        <option value="2">Created last week</option>
-                        <option value="3">Created last month</option>
-                        <option value="4">Edited last week</option>
-                        <option value="5">Edited last month</option>
-                    </select>
-                    
-                </div>
-                
-                
-                <!-- Example table -->
-                <div class="module">
-                    <h2><span>Tabela Zamówienia</span></h2>
-                    <div id = "test">
-                        <script src="getScript.js"></script>	
-                    </div>              
-                    
-                </div> <!-- End .module -->                
-                
-                     <div class="pagination">           
-                		<a href="" class="button"><span><img src="arrow-stop-180-small.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/arrow-stop-180-small.gif" height="9" width="12" alt="First" /> First</span></a> 
-                        <a href="" class="button"><span><img src="arrow-180-small.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/arrow-180-small.gif" height="9" width="12" alt="Previous" /> Prev</span></a>
-                        <div class="numbers">
-                            <span>Page:</span> 
-                            <a href="">1</a> 
-                            <span>|</span> 
-                            <a href="">2</a> 
-                            <span>|</span> 
-                            <span class="current">3</span> 
-                            <span>|</span> 
-                            <a href="">4</a> 
-                            <span>|</span> 
-                            <a href="">5</a> 
-                            <span>|</span> 
-                            <a href="">6</a> 
-                            <span>|</span> 
-                            <a href="">7</a> 
-                            <span>|</span> 
-                            <span>...</span> 
-                            <span>|</span> 
-                            <a href="">99</a>
-                        </div> 
-                        <a href="" class="button"><span>Next <img src="arrow-000-small.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/arrow-000-small.gif" height="9" width="12" alt="Next" /></span></a> 
-                        <a href="" class="button last"><span>Last <img src="arrow-stop-000-small.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/arrow-stop-000-small.gif" height="9" width="12" alt="Last" /></span></a>
-                        <div style="clear: both;"></div> 
-                     </div>                                  
-			</div> <!-- End .grid_12 -->
-            <br>        
-        </div> <!-- End .container_12 -->		
+		<div class="container_12">
+		    <div id="test">
+                <script src="getZamow.js"></script>
+            <div>          
+        </div> <!-- End .container_12 -->			
            
         <!-- Footer -->
         <div id="footer">

@@ -9,7 +9,7 @@ var username = "test";
 var password = "admin1";
 
 var request = new XMLHttpRequest();      
-var url = 'https://costume-rental.herokuapp.com/costumes';    
+var url = 'https://costume-rental.herokuapp.com/models';    
 request.open('GET', url, true);
 //request.withCredentials=true;
 
