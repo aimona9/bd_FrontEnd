@@ -1,4 +1,4 @@
-async function loginRequest()
+function loginRequest()
 {
     alert("Login button was clicked");   
 
@@ -13,8 +13,14 @@ async function loginRequest()
     if (username == ck_user && password == ck_pass)
     {
         console.log("Correct username and password");
-        window.location.href.replace = 'main.html';
-        
+        setTimeout(() => {
+            window.location.replace = 'https://wypozyczalniastrojowteatrlnych.herokuapp.com/main.html';
+        })
+    
+        window.open('https://wypozyczalniastrojowteatrlnych.herokuapp.com/main.html');
+        //window.open('https://wypozyczalniastrojowteatrlnych.herokuapp.com/main.html');
+        //window.open('','_self').close()
+                
     }
     else if (username == null || password == null)
     {
@@ -25,5 +31,5 @@ async function loginRequest()
     {
         console.log("Wrong username and password");
         alert("Login failed. Please try again with a valid username and password");
-    }    
+    }   
 } 

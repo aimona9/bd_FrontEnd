@@ -2,7 +2,6 @@ const app = document.getElementById('test');
 const models_container = document.createElement('div');
 models_container.setAttribute('class', 'container');
 
-//app.appendChild(logo)
 app.appendChild(models_container);
 
 var username = "test";
