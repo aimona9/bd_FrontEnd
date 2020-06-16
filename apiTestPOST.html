@@ -156,8 +156,8 @@
                     <div class="module-body">
                         <form id="post_test">
                             <p>
-                                <h1 style="text-align:center">Add new reservation</h1>
-                                <hr width="300">
+                                <h1 style="text-align:left">Add new reservation</h1>
+                                <hr width="330">
 
                                 <label for="date_pickUp">Pick-up Date:</label>
                                 <input type="date" id="date_pickUp" name="date_pickUp">
@@ -168,22 +168,49 @@
                                 <label for="cars">Choose a pick up location:</label>
                                     <select name="location" id="location">
                                     <option value="metro_poli">Metro Politechnika</option>
-                                    <option value="wola">wola</option>
+                                    <option value="wola">Wola</option>
                                     <option value="ursynow">Ursynow</option>
-                                    <option value="praga">PragaAudi</option>
+                                    <option value="praga">Praga Południa</option>
+                                    <option value="praga">Stare Bemowo</option>
+                                    <option value="praga">Centrum</option>
+                                    <option value="praga">Marszawlkowska</option>
                                 </select>
                                 <br><br>
-                            
-                                <label for="cars">How many costumes would you like to reserve?:</label>
-                                <select name="numStroj" id="numStroj">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
+                                <div class = "costume_select">
+                                    <div id = "leftSide">
+                                        <label for="numOfCostumes">How many costumes would you like to reserve?:</label>
+                                        <select name="numStroj" id="numStroj">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>                                       
+                                    </div>
+                                    <div id=" rightSide">
+                                        <label for="costumeID">Choose the costume ID:</label>
+                                        <select name="numStroj" id="numStroj">
+                                            <option value="1">s1</option>
+                                            <option value="2">s2</option>
+                                            <option value="3">s3</option>
+                                            <option value="4">s4</option>
+                                            <option value="5">s5</option>
+                                            <option value="6">s6</option>
+                                            <option value="7">s7</option>
+                                            <option value="8">s8</option>
+                                            <option value="9">s9</option>
+                                            <option value="10">s10</option>
+                                        </select>                                        
+                                    </div>
+                                </div>
                                 <br><br>                           
                             
-                                <hr width="300">    
+                                <hr width="330">    
                                 <button onclick="someRequest()" class ="button_reserv">Add Reservation</button>
                                 <!--<script src="postScript.js"></script> -->
                                 <!--<script src="base64.js"></script> -->

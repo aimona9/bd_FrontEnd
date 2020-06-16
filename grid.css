@@ -4,7 +4,9 @@
 
 	Licensed under GPL and MIT.
 */
-
+body{
+	text-align: center;
+}
 /* =Containers
 --------------------------------------------------------------------------------*/
 
@@ -14,6 +16,7 @@
 	width: 92%;
 	margin-left: 4%;
 	margin-right: 4%;
+	text-align: left;
 }
 
 /* =Grid >> Global
@@ -42,8 +45,12 @@
 	max-width: 1200px;
 	margin: 20px 100px;
 	align-items: center;
-
   }
+ hr
+ {
+	height: 12px;
+ }
+
   .button_reserv {
 	background-color: #4CAF50; /* Green */
 	border: none;
@@ -68,6 +75,40 @@
 	  flex: 1 1 calc(33% - 2rem);
 	}
   }
+.costume_select
+{
+	width:300px; 
+	height:190px; 
+	background-color:rgb(190, 215, 224); 
+	padding-top:20px; 
+	padding-left:15px; 
+	padding-right:15px; 
+}
+
+#rightSide
+{
+	float:left; 
+    width:180px; 
+    height:160px; 
+    background-color:white; 
+    border:solid black;
+}
+
+#leftSide
+{
+	float:right; 
+    width:150px; 
+    height:160px; 
+    background-color:white; 
+    border:solid black;       
+
+}
+.login
+{
+	margin-left: 250px;
+	margin-right: 250px;
+}
+
 
 .grid_1,
 .grid_2,

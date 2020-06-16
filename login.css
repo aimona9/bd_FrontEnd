@@ -1,0 +1,33 @@
+ /*-------------------------------------------- Login page styles -----------------------------------------------*/
+ #login_test_1
+ {	
+     max-width: 1200px;
+     margin: 120px 100px;
+     margin-right: 100px;
+     align-items: center;
+     display: inline-block;
+     margin: 1rem;
+     border: 3px solid gray;
+     border-radius: 8px;
+     background-color: rgb(167, 233, 233);
+     font-size: 20px;
+ }
+ 
+ label[for="username"], label[for="password"]
+ {
+   color: rgb(20, 20, 20);   
+   text-align: center;
+}
+ 
+   /* Width of inputs */
+ input[type=text], input[type=password] 
+ {
+   width: 50%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 2px solid rgb(141, 138, 138);
+   box-sizing: border-box;
+   border-radius: 5px;    
+ }
+ /*-------------------------------------------- Login page styles -----------------------------------------------*/

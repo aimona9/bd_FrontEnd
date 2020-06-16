@@ -1,16 +1,18 @@
-const app = document.getElementById('test')
-
-//const logo = document.createElement('img')
-//logo.src = 'logo.png'
-
-const models_container = document.createElement('div')
-models_container.setAttribute('class', 'container')
+const app = document.getElementById('test');
+const models_container = document.createElement('div');
+models_container.setAttribute('class', 'container');
 
 //app.appendChild(logo)
-app.appendChild(models_container)
+app.appendChild(models_container);
 
-var request = new XMLHttpRequest()
-request.open('GET', 'https://costume-rental.herokuapp.com/models', true)
+var username = "test";
+var password = "admin1";
+
+var request = new XMLHttpRequest();      
+var url = 'https://costume-rental.herokuapp.com/models';    
+request.open('GET', url, false, username, password);
+request.withCredentials=true;
+
 request.onload = function() {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response)
@@ -41,11 +43,12 @@ request.onload = function() {
       mod.appendChild(collection)
       mod.appendChild(price)
     })
-  } else {
+  } 
+  else 
+  {
     const errorMessage = document.createElement('marquee')
     errorMessage.textContent = `Gah, it's not working!`
     app.appendChild(errorMessage)
   }
 }
-
 request.send()
