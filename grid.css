@@ -28,13 +28,15 @@ body{
   
   .models_container {
 	padding-inline-start:15px ;
-	display: block;
+	
 	padding: 15px 15x;
+	margin-bottom: 150px;
   }
   
   .model {
 	margin: 1rem;
-	border: 1px solid gray;
+	border: 1px solid gray;	
+	border-radius: 5px;
   }
   .reservation {
 	margin: 1rem;

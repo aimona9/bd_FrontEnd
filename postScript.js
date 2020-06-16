@@ -3,8 +3,8 @@ async function someRequest()
     alert("click function was called");
     var datePickUp = document.getElementById(date_pickUp);
 
-    var dat = JSON.stringify({"pick_up_date": "2007-06-14T18:08:03.314Z","return_date":"2008-06-24T18:08:03.315Z","pick_up_location_id":1
-  , "costumes": [1,3,8]});
+    var dat = JSON.stringify({"pick_up_date": "2017-06-14T18:08:03.314Z","return_date":"2018-06-24T18:08:03.315Z","pick_up_location_id":1
+  , "costumes": [{"model_id": 2, "quantity": 1}]});
     
     //var Base64 = req
     //var Base64 = require('js-base64').Base64;
