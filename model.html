@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>MainDashboard</title>
+       
+        <!-- CSS Reset -->
+		<link rel="stylesheet" type="text/css" href="reset.css" media="screen" />       
+        <!-- Fluid 960 Grid System - CSS framework -->
+		<link rel="stylesheet" type="text/css" href="grid.css" media="screen" />		
+        <!-- Main stylesheet -->
+        <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />        
+        <!-- WYSIWYG editor stylesheet -->
+        <link rel="stylesheet" type="text/css" href="jquery.wysiwyg.css" media="screen" />        
+        <!-- Table sorter stylesheet -->
+        <link rel="stylesheet" type="text/css" href="tablesorter.css" media="screen" />        
+        <!-- Thickbox stylesheet -->
+        <link rel="stylesheet" type="text/css" href="thickbox.css" media="screen" />        
+        <!-- Themes. Below are several color themes. Uncomment the line of your choice to switch to different color. All styles commented out means blue theme. -->
+        <link rel="stylesheet" type="text/css" href="theme-blue.css" media="screen" />
+        <!--<link rel="stylesheet" type="text/css" href="css/theme-red.css" media="screen" />-->
+        <!--<link rel="stylesheet" type="text/css" href="css/theme-yellow.css" media="screen" />-->
+        <!--<link rel="stylesheet" type="text/css" href="css/theme-green.css" media="screen" />-->
+        <!--<link rel="stylesheet" type="text/css" href="css/theme-graphite.css" media="screen" />-->
+        
+		<!-- JQuery engine script-->
+		<script type="text/javascript" src="jquery-1.3.2.min.js"></script>        
+		<!-- JQuery WYSIWYG plugin script -->
+		<script type="text/javascript" src="jquery.wysiwyg.js"></script>        
+        <!-- JQuery tablesorter plugin script-->
+		<script type="text/javascript" src="jquery.tablesorter.min.js"></script>        
+		<!-- JQuery pager plugin script for tablesorter tables -->
+		<script type="text/javascript" src="jquery.tablesorter.pager.js"></script>        
+		<!-- JQuery password strength plugin script -->
+		<script type="text/javascript" src="jquery.pstrength-min.1.2.js"></script>        
+		<!-- JQuery thickbox plugin script -->
+		<script type="text/javascript" src="thickbox.js"></script>        
+        <!-- Initiate WYIWYG text area -->
+		<script type="text/javascript">
+			$(function()
+			{
+			$('#wysiwyg').wysiwyg(
+			{
+			controls : {
+			separator01 : { visible : true },
+			separator03 : { visible : true },
+			separator04 : { visible : true },
+			separator00 : { visible : true },
+			separator07 : { visible : false },
+			separator02 : { visible : false },
+			separator08 : { visible : false },
+			insertOrderedList : { visible : true },
+			insertUnorderedList : { visible : true },
+			undo: { visible : true },
+			redo: { visible : true },
+			justifyLeft: { visible : true },
+			justifyCenter: { visible : true },
+			justifyRight: { visible : true },
+			justifyFull: { visible : true },
+			subscript: { visible : true },
+			superscript: { visible : true },
+			underline: { visible : true },
+            increaseFontSize : { visible : false },
+            decreaseFontSize : { visible : false }
+			}
+			} );
+			});
+        </script>
+        
+        <!-- Initiate tablesorter script -->
+        <script type="text/javascript">
+			$(document).ready(function() { 
+				$("#myTable") 
+				.tablesorter({
+					// zebra coloring
+					widgets: ['zebra'],
+					// pass the headers argument and assing a object 
+					headers: { 
+						// assign the sixth column (we start counting zero) 
+						6: { 
+							// disable it by setting the property sorter to false 
+							sorter: false 
+						} 
+					}
+				}) 
+			.tablesorterPager({container: $("#pager")}); 
+		}); 
+		</script>
+        
+        <!-- Initiate password strength script -->
+		<script type="text/javascript">
+			$(function() {
+			$('.password').pstrength();
+			});
+        </script>
+
+        <script src="logOut.js"></script>
+	</head>
+	<body>
+    	<!-- Header -->
+        <div id="header">
+            <!-- Header. Status part -->
+            <div id="header-status">
+                <div class="container_12">
+                    <div class="grid_8">
+                        <h1> Wypożyczalnia strojów teatralnych</h1>                         
+                           
+					&nbsp;
+                    </div>
+                    <div class="grid_4">
+                        <a href="" id="logout" title="logoutClick"
+                        href="#" onclick="handleLogout()">Logout
+                        </a>
+                                                
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div> <!-- End #header-status -->
+            
+            <!-- Header. Main part -->
+            <div id="header-main">
+                <div class="container_12">
+                    <div class="grid_12">
+                        <div id="logo">
+                            <ul id="nav">
+                                <li><a href="main.html">Dashboard</a></li>
+                                <li><a href="zamowienia.html">Zamówienia</a></li>                                
+                                <li><a href="strojPage.html">Strojów</a></li>
+                                <li id="current"><a href="">Models</a></li>
+                                <li><a href="apiTestGET.html">API Test - GET</a></li>
+                                <li><a href="apiTestPOST.html">API Test - POST</a></li>                                
+                            </ul>
+                        </div><!-- End. #Logo -->
+                    </div><!-- End. .grid_12-->
+                    <div style="clear: both;"></div>
+                </div><!-- End. .container_12 -->
+            </div> <!-- End #header-main -->
+            <div style="clear: both;"></div>                       
+        </div> <!-- End #header -->
+        
+		<div class="container_12">       
+            
+            <!-- Dashboard icons -->
+            <div class="grid_7">
+            	<a href="" class="dashboard-module">
+                	<img src="Crystal_Clear_write.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/Crystal_Clear_write.gif" width="64" height="64" alt="edit" />
+                	<span>Dodaj Strój</span>
+                </a>
+                
+                <a href="" class="dashboard-module">
+                	<img src="Crystal_Clear_file.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/Crystal_Clear_file.gif" width="64" height="64" alt="edit" />
+                	<span>Dodaj Nowa Zamówienia</span>
+                </a>
+                
+                <a href="" class="dashboard-module">
+                	<img src="Crystal_Clear_files.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/Crystal_Clear_files.gif" width="64" height="64" alt="edit" />
+                	<span>Dodaj Nowa Klient</span>
+                </a>
+                
+                <a href="" class="dashboard-module">
+                	<img src="Crystal_Clear_calendar.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/Crystal_Clear_calendar.gif" width="64" height="64" alt="edit" />
+                	<span>Kalendarz</span>
+                </a>               
+                      
+                <a href="" class="dashboard-module">
+                	<img src="Crystal_Clear_settings.gif" tppabs="http://www.xooom.pl/work/magicadmin/images/Crystal_Clear_settings.gif" width="64" height="64" alt="edit" />
+                	<span>Settings</span>
+                </a>
+                <div style="clear: both"></div>
+            </div> <!-- End .grid_7 -->
+            
+            <!-- Account overview -->
+            <div class="grid_5">
+                <div class="module">
+                        <h2><span>Przegląd konta</span></h2>
+                        
+                        <div class="module-body">
+                        
+                        	<p>
+                                <strong>User: </strong>User X<br />
+                                <strong>Your last visit was on: </strong>20 January 2010,<br />
+                                <strong>From IP: </strong>000.000.00.00
+                            </p>
+                           
+                        </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div> <!-- End .grid_5 -->
+            
+            <div style="clear:both;"></div>          
+                        
+            <div class="grid_order_tables">                        
+                <div class="bottom-spacing">                
+                    <!-- Button -->
+                    <div class="float-right">
+                        <a href="" class="button">
+                        	<span>Nowa Zamówienia <img src="plus-small.gif" width="12" height="9" alt="New article" /></span>
+                        </a>
+                    </div>                    
+                    <!-- Table records filtering -->
+                    Filter: 
+                    <select class="input-short">
+                    	<option value="1" selected="selected">Select filter</option>
+                        <option value="2">Created last week</option>
+                        <option value="3">Created last month</option>
+                        <option value="4">Edited last week</option>
+                        <option value="5">Edited last month</option>
+                    </select>
+                    
+                </div>
+                
+                
+                <!-- Example table -->
+                <div class="module">
+                	<h2><span>Tabela Zamówienia</span></h2>
+                    
+                    <div class="module-table-body">
+                    	<form action="">
+                        <table id="myTable" class="tablesorter">
+                        	<thead>
+                                <tr>
+                                    <th style="width:5%">#</th>
+                                    <th style="width:14%">Numer Zamówienia</th>
+                                    <th style="width:21%">Nazwa Klienta</th>
+                                    <th style="width:10%">Data Zamówienia</th>
+                                    <th style="width:10%">Data Powrotu</th>
+                                    <th style="width:13%">Użytkownika</th>
+                                    <th style="width:10%">ID Strój</th>
+                                    <th style="width:8%">Sztuk</th>
+                                    <th style="width:15%"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="align-center">1</td>
+                                    <td><a href="">9238</a></td>
+                                    <td>Polski Teatr Starych Sztuk</td>
+                                    <td>09.09.2007</td>
+                                    <td>20.09.2007</td>
+                                    <td>Grzegorz Nowak</td>
+                                    <td>ST2232</td>
+                                    <td>1</td>
+                                    <td>
+                                    	<input type="checkbox" />
+                                        <a href=""><img src="minus-circle.gif" width="16" height="16" alt="Usuń" /></a>
+                                        <a href=""><img src="pencil.gif" width="16" height="16" alt="Editować" /></a>
+                                        <a href=""><img src="balloon.gif" width="16" height="16" alt="Komentuje" /></a>
+                                        <a href=""><img src="bin.gif" width="16" height="16" alt="Refresh" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-center">2</td>
+                                    <td><a href="">1688</a></td>
+                                    <td>Polski Teatr Starych Sztuk</td>
+                                    <td>29.11.2006</td>
+                                    <td>01.01.2007</td>
+                                    <td>Grzegorz Nowak</td>
+                                    <td>ST2232</td>
+                                    <td>1</td>
+                                    <td>
+                                    	<input type="checkbox" />
+                                        <a href=""><img src="minus-circle.gif" width="16" height="16" alt="Usuń" /></a>
+                                        <a href=""><img src="pencil.gif" width="16" height="16" alt="Editować" /></a>
+                                        <a href=""><img src="balloon.gif" width="16" height="16" alt="Komentuje" /></a>
+                                        <a href=""><img src="bin.gif" width="16" height="16" alt="Refresh" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-center">3</td>
+                                    <td><a href="">9228</a></td>
+                                    <td>Polski Teatr Starych Sztuk</td>
+                                    <td>19.11.2007</td>
+                                    <td>26.11.2007</td>
+                                    <td>Beata</td>
+                                    <td>ST3262</td>
+                                    <td>2</td>
+                                    <td>
+                                    	<input type="checkbox" />
+                                        <a href=""><img src="minus-circle.gif" width="16" height="16" alt="Usuń" /></a>
+                                        <a href=""><img src="pencil.gif" width="16" height="16" alt="Editować" /></a>
+                                        <a href=""><img src="balloon.gif" width="16" height="16" alt="Komentuje" /></a>
+                                        <a href=""><img src="bin.gif" width="16" height="16" alt="Refresh" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-center">4</td>
+                                    <td><a href="">9157</a></td>
+                                    <td>Warszawski Złoty Teatr</td>
+                                    <td>04.01.2008</td>
+                                    <td>11.01.2008</td>
+                                    <td>Rajmund</td>
+                                    <td>ST1732</td>
+                                    <td>5</td>
+                                    <td>
+                                    	<input type="checkbox" />
+                                        <a href=""><img src="minus-circle.gif" width="16" height="16" alt="Usuń" /></a>
+                                        <a href=""><img src="pencil.gif" width="16" height="16" alt="Editować" /></a>
+                                        <a href=""><img src="balloon.gif" width="16" height="16" alt="Komentuje" /></a>
+                                        <a href=""><img src="bin.gif" width="16" height="16" alt="Refresh" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-center">5</td>
+                                    <td><a href="">8146</a></td>
+                                    <td>Jonatan Kone</td>
+                                    <td>05.01.2008</td>
+                                    <td>09.01.2008</td>
+                                    <td>Grzegorz Nowak</td>
+                                    <td>ST556</td>
+                                    <td>1</td>
+                                    <td>
+                                    	<input type="checkbox" />
+                                        <a href=""><img src="minus-circle.gif" width="16" height="16" alt="Usuń" /></a>
+                                        <a href=""><img src="pencil.gif" width="16" height="16" alt="Editować" /></a>
+                                        <a href=""><img src="balloon.gif" width="16" height="16" alt="Komentuje" /></a>
+                                        <a href=""><img src="bin.gif" width="16" height="16" alt="Refresh" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-center">6</td>
+                                    <td><a href="">9207</a></td>
+                                    <td>Polski Teatr Starych Sztuk</td>
+                                    <td>09.09.2007</td>
+                                    <td>20.09.2007</td>
+                                    <td>Łukasz</td>
+                                    <td>ST2232</td>
+                                    <td>1</td>
+                                    <td>
+                                    	<input type="checkbox" />
+                                        <a href=""><img src="minus-circle.gif" width="16" height="16" alt="Usuń" /></a>
+                                        <a href=""><img src="pencil.gif" width="16" height="16" alt="Editować" /></a>
+                                        <a href=""><img src="balloon.gif" width="16" height="16" alt="Komentuje" /></a>
+                                        <a href=""><img src="bin.gif" width="16" height="16" alt="Refresh" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-center">7</td>
+                                    <td><a href="">7347</a></td>
+                                    <td>Aleksandra Ryba</td>
+                                    <td>15.05.2009</td>
+                                    <td>25.05.2009</td>
+                                    <td>Leszek</td>
+                                    <td>ST662</td>
+                                    <td>1</td>
+                                    <td>
+                                    	<input type="checkbox" />
+                                        <a href=""><img src="minus-circle.gif" width="16" height="16" alt="Usuń" /></a>
+                                        <a href=""><img src="pencil.gif" width="16" height="16" alt="Editować" /></a>
+                                        <a href=""><img src="balloon.gif" width="16" height="16" alt="Komentuje" /></a>
+                                        <a href=""><img src="bin.gif" width="16" height="16" alt="Refresh" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-center">8</td>
+                                    <td><a href="">9521</a></td>
+                                    <td>Polski Teatr Starych Sztuk</td>
+                                    <td>17.10.2010</td>
+                                    <td>20.11.2010</td>
+                                    <td>Grzegorz Nowak</td>
+                                    <td>ST490</td>
+                                    <td>5</td>
+                                    <td>
+                                    	<input type="checkbox" />
+                                        <a href=""><img src="minus-circle.gif" width="16" height="16" alt="Usuń" /></a>
+                                        <a href=""><img src="pencil.gif" width="16" height="16" alt="Editować" /></a>
+                                        <a href=""><img src="balloon.gif" width="16" height="16" alt="Komentuje" /></a>
+                                        <a href=""><img src="bin.gif" width="16" height="16" alt="Refresh" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-center">9</td>
+                                    <td><a href="">9600</a></td>
+                                    <td>Polski Teatr Starych Sztuk</td>
+                                    <td>02.12.2011</td>
+                                    <td>04.01.2012</td>
+                                    <td>Michał</td>
+                                    <td>ST882</td>
+                                    <td>6</td>
+                                    <td>
+                                    	<input type="checkbox" />
+                                        <a href=""><img src="minus-circle.gif" width="16" height="16" alt="Usuń" /></a>
+                                        <a href=""><img src="pencil.gif" width="16" height="16" alt="Editować" /></a>
+                                        <a href=""><img src="balloon.gif" width="16" height="16" alt="Komentuje" /></a>
+                                        <a href=""><img src="bin.gif" width="16" height="16" alt="Refresh" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-center">10</td>
+                                    <td><a href="">9200</a></td>
+                                    <td>Polski Teatr Starych Sztuk</td>
+                                    <td>13.08.2012</td>
+                                    <td>25.08.2012</td>
+                                    <td>Piotr</td>
+                                    <td>ST290</td>
+                                    <td>3</td>
+                                    <td>
+                                    	<input type="checkbox" />
+                                        <a href=""><img src="minus-circle.gif" width="16" height="16" alt="Usuń" /></a>
+                                        <a href=""><img src="pencil.gif" width="16" height="16" alt="Editować" /></a>
+                                        <a href=""><img src="balloon.gif" width="16" height="16" alt="Komentuje" /></a>
+                                        <a href=""><img src="bin.gif" width="16" height="16" alt="Refresh" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-center">11</td>
+                                    <td><a href="">9308</a></td>
+                                    <td>Joanna Bramka</td>
+                                    <td>02.06.2017</td>
+                                    <td>19.06.2017</td>
+                                    <td>Piotr</td>
+                                    <td>ST455</td>
+                                    <td>2</td>
+                                    <td>
+                                    	<input type="checkbox" />
+                                        <a href=""><img src="minus-circle.gif" width="16" height="16" alt="Usuń" /></a>
+                                        <a href=""><img src="pencil.gif" width="16" height="16" alt="Editować" /></a>
+                                        <a href=""><img src="balloon.gif" width="16" height="16" alt="Komentuje" /></a>
+                                        <a href=""><img src="bin.gif" width="16" height="16" alt="Refresh" /></a>
+                                    </td>
+                                </tr>  
+                               
+                            </tbody>
+                        </table>
+                        </form>
+                        <div class="pager" id="pager">
+                            <form action="">
+                                <div>
+                                <img class="first" src="arrow-stop-180.gif" alt="first"/>
+                                <img class="prev" src="arrow-180.gif" alt="prev"/> 
+                                <input type="text" class="pagedisplay input-short align-center"/>
+                                <img class="next" src="arrow.gif" alt="next"/>
+                                <img class="last" src="arrow-stop.gif" alt="last"/> 
+                                <select class="pagesize input-short align-center">
+                                    <option value="10" selected="selected">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="40">40</option>
+                                </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="table-apply">
+                            <form action="">
+                            <div>
+                            <span>Apply action to selected:</span> 
+                            <select class="input-medium">
+                                <option value="1" selected="selected">Wybierz akcja</option>
+                                <option value="2">Publish</option>
+                                <option value="3">Unpublish</option>
+                                <option value="4">Delete</option>
+                            </select>
+                            </div>
+                            </form>
+                        </div>
+                        <div style="clear: both"></div>
+                     </div> <!-- End .module-table-body -->
+                </div> <!-- End .module -->                
+                
+                <div class="pagination">
+                    <a href="" class="button"><span><img src="arrow-stop-180-small.gif" height="9" width="12" alt="First" /> First</span></a> 
+                    <a href="" class="button"><span><img src="arrow-180-small.gif" height="9" width="12" alt="Previous" /> Prev</span></a>
+                    <div class="numbers">
+                        <span>Page:</span> 
+                        <a href="">1</a> 
+                        <span>|</span> 
+                        <a href="">2</a> 
+                        <span>|</span> 
+                        <span class="current">3</span> 
+                        <span>|</span> 
+                        <a href="">4</a> 
+                        <span>|</span> 
+                        <a href="">5</a> 
+                        <span>|</span> 
+                        <a href="">6</a> 
+                        <span>|</span> 
+                        <a href="">7</a> 
+                        <span>|</span> 
+                        <span>...</span> 
+                        <span>|</span> 
+                        <a href="">99</a>
+                    </div> 
+                    <a href="" class="button"><span>Next <img src="arrow-000-small.gif" height="9" width="12" alt="Next" /></span></a> 
+                    <a href="" class="button last"><span>Last <img src="arrow-stop-000-small.gif" height="9" width="12" alt="Last" /></span></a>
+                    <div style="clear: both;"></div> 
+                </div>                      
+			</div> <!-- End .grid_12 -->
+            <br>    
+            <!-- Categories list -->
+            <div class="grid_6">                
+                <div class="module">
+                    <h2><span>Kategoria</span></h2>                        
+                    <div class="module-body">
+                        <a href="" class="removable">Immages</a><br />
+                        <a href="" class="removable">Videos</a><br />
+                        <a href="" class="removable">Audios</a><br />
+                        <a href="" class="removable">Documents</a><br />
+                        <a href="" class="removable">Apps</a><br />
+                        <a href="" class="removable">Others</a>                         
+                        <form action="">
+                            <fieldset>
+                                <input type="text" class="input-medium" />&nbsp;&nbsp;<input class="submit-green" type="submit" value="Add category" />
+                            </fieldset>
+                        </form>
+                    </div>
+                </div> <!-- module -->
+                <div style="clear:both;"></div>
+			</div> <!-- End .grid_6 -->
+            
+            <!-- To-do list -->
+            <div class="grid_6">           
+                <div class="module">
+                    <h2><span>Lista rzeczy do zrobienia</span></h2>                        
+                    <div class="module-body">
+                        <a href="" class="checkable">check articles for spelling</a><br />
+                        <a href="" class="checkable">remove old articles</a><br />
+                        <a href="" class="checkable">switch to a bigger plan</a><br />
+                        <a href="" class="removable completed">write an article</a><br />
+                        <a href="" class="removable completed">do maintanance stuff</a><br />
+                         
+                        <form action="">
+                            <fieldset>
+                                <input type="text" class="input-medium" />&nbsp;&nbsp;<input class="submit-green" type="submit" value="Add item" />
+                            </fieldset>
+                         </form>
+                     </div>
+                </div> <!-- module -->
+                <div style="clear:both;"></div>            
+            </div> <!-- End .grid_6 -->
+            <div style="clear:both;"></div>         
+            <div style="clear:both;"></div>
+        </div> <!-- End .container_12 -->		
+           
+        <!-- Footer -->
+        <div id="footer">
+        	<div class="container_12">
+            	<div class="grid_12">
+                	<!-- You can change the copyright line for your own -->
+                	<p>&copy; 2020. <a href="main.html" title="Visit Today">Wypożyczalnia strojów teatralnych</a></p>
+        		</div>
+            </div>
+            <div style="clear:both;"></div>
+        </div> <!-- End #footer -->
+	</body>
+</html>
